@@ -1,38 +1,69 @@
 Все глобальные настройки Git хранит в файле .gitconfig в домашней директории.
 
 Указать имя и email:
+
 git config --global user.name "USERNAME"
+
 git config --global user.email email@address.domain
+
 ```
 
 Сделать папку репозиторием
+
 git init
 
 Проверить состояние репозитория
+
 git status
 
 Добавлять файлы можно и по одному / всю папку / и чет там all.
+
 git add flename.txt
+
 git add .
+
 git add -all
 
-
 Сделать коммит можно командой git commit c ключом -m
+
 git commit -m 'Текстовое описание коммита'
 
-Список коммитов: 
+Список коммитов:
+
 git log
 
+Сокращенный список коммитов:
+
+git log --oneline
+
 Привязать удалённый репозиторий к локальному
+
 git remote add origin git@github.com:%ИМЯ_АККАУНТА%/first-project.git
 
 Убедиться, что репозитории связаны:
+
 git remote -v
 
 Отправить изменения на удалённый репозиторий:
+
 git push
-	В первый раз эту команду нужно вызвать с флагом -u и параметрами origin (имя удалённого репозитория) и main или master
-	git push -u origin master
+
+В первый раз эту команду нужно вызвать с флагом -u и параметрами origin (имя удалённого репозитория) и main или master
+
+git push -u origin master
 
 Шпаргалка по разметке для README.md.
+
 https://gist.github.com/fomvasss/8dd8cd7f88c67a4e3727f9d39224a84c
+
+Файл HEAD — один из служебных файлов папки .git. Он указывает на коммит, который сделан последним (то есть на самый новый).
+
+Статусы файлов в Git:
+
+untracked - неотслеживаемый
+
+staged - подготовленный
+
+tracked - отслеживаемый
+
+modified - изменённый
