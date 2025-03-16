@@ -1,0 +1,46 @@
+Все глобальные настройки Git хранит в файле .gitconfig в домашней директории.
+Указать имя и email:
+``` bash
+git config --global user.name "USERNAME"
+git config --global user.email email@address.domain
+```
+
+Сделать папку репозиторием
+git init
+
+Проверить состояние репозитория — git status
+
+Все глобальные настройки Git хранит в файле .gitconfig в домашней директории.
+
+Добавлять файлы можно и по одному, без ключа --all.
+
+$ git add todo.txt
+
+$ git add readme.txt
+
+Также можно добавить текущую папку целиком — в этом случае все файлы в ней тоже будут добавлены. Обратиться к текущей папке в Bash позволяет точка (.).
+
+$ git add .
+
+Сделать коммит можно командой git commit c ключом -m
+
+git commit -m 'Создал и отредактировал task.txt'
+
+Список коммитов: git log
+
+Привязать удалённый репозиторий к локальному
+
+$ git remote add origin git@github.com:%ИМЯ_АККАУНТА%/first-project.git
+
+Убедиться, что репозитории связаны, — git remote -v
+
+Отправить изменения на удалённый репозиторий — git push
+
+В первый раз эту команду нужно вызвать с флагом -u и параметрами origin (имя удалённого репозитория) и main или master
+
+$ git push -u origin master
+
+Шпаргалка по разметке.
+
+https://gist.github.com/fomvasss/8dd8cd7f88c67a4e3727f9d39224a84c
+
